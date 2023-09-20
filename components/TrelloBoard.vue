@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-  import type {Column} from "~/types";
+  import type {Column} from "@/types";
   import {nanoid} from "nanoid";
 
   const columns = ref<Column[]>([
@@ -54,12 +54,13 @@
     <div v-for="column in columns" :key="column.id"
       class="column bg-gray-200 p-5 rounded min-w-[250px]"
     >
-      <header>
+      <header class="font-bold mb-2">
         {{ column.title }}
       </header>
-      <p v-for="task in column.tasks" :key="task.id">
-        {{ task.title }}
-      </p>
+      <TrelloBoardTask v-for="task in column.tasks" :task="task" />
+      <footer>
+        <button class="text-gray-500">+ Add a Card</button>
+      </footer>
     </div>
   </section>
 </template>
