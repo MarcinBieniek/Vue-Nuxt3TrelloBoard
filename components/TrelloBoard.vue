@@ -58,12 +58,15 @@
       group="columns"
       item-key="id"
       class="flex gap-4 overflow-x-auto items-start"
+      :animation="150"
+      handle=".drag-handle"
     >
-    <template #item="{element: column}: {element: Column}">
+    <template #item="{element: column}: {element: Column }">
       <div
         class="column bg-gray-200 p-5 rounded min-w-[250px]"
       >
         <header class="font-bold mb-2">
+          <DragHandle />
           {{ column.title }}
         </header>
         <TrelloBoardTask v-for="task in column.tasks" :task="task" />
