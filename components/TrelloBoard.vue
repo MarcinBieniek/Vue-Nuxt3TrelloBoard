@@ -47,6 +47,7 @@
       tasks: []
     },
   ])
+  const shift = useKeyModifier("Shift")
 
 </script>
 
@@ -70,7 +71,7 @@
         </header>
         <draggable
           v-model="column.tasks"
-          group="tasks"
+          :group="{ name: 'tasks', pull: shift ? 'clone' : true}"
           item-key="id"
           :animation="150"
           handle=".drag-handle"
