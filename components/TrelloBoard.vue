@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-  import type {Column} from "@/types";
+  import type {Column, Task} from "@/types";
   import {nanoid} from "nanoid";
   import draggable from "vuedraggable";
 
@@ -52,7 +52,6 @@
 
 <template>
   <section >
-
     <draggable
       v-model="columns"
       group="columns"
@@ -69,7 +68,19 @@
           <DragHandle />
           {{ column.title }}
         </header>
-        <TrelloBoardTask v-for="task in column.tasks" :task="task" />
+        <draggable
+          v-model="column.tasks"
+          group="tasks"
+          item-key="id"
+          :animation="150"
+          handle=".drag-handle"
+        >
+          <template #item="{element: task} : {element: Task}">
+            <TrelloBoardTask
+              :task="task"
+            />
+          </template>
+        </draggable>
         <footer>
           <button class="text-gray-500">+ Add a Card</button>
         </footer>
