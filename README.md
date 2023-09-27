@@ -1,75 +1,28 @@
-# Nuxt 3 Minimal Starter
+## Description
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Trello board created with Nuxt 3 and Tailwind. In the project I used additional libraries, such as Vue Draggable and VueUse (I used, among others, useLocalStorage to save data). The goal was also to practice CRUD in Nuxt.
 
-## Setup
+## Demo
 
-Make sure to install the dependencies:
+Live demo: [https://main--moonlit-unicorn-c33779.netlify.app/](https://main--moonlit-unicorn-c33779.netlify.app/)
 
-```bash
-# npm
-npm install
+Thank you for taking your time and checking out my project.
 
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+## Running the app
 
 ```bash
-# npm
-npm run dev
+# development
+$ npm run dev
 
-# pnpm
-pnpm run dev
+# build
+$ npm run buil
 
-# yarn
-yarn dev
-
-# bun
-bun run dev
+# preview
+$ npm run preview
 ```
 
-## Production
+## Stay in touch
 
-Build the application for production:
+Author - [Marcin Bieniek](https://www.linkedin.com/in/marcin-bieniek-617565271/)
 
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Portfolio - [marcindev.netlify.app](https://marcindev.netlify.app/)
